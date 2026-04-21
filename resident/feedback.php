@@ -24,7 +24,7 @@ $stmt->execute([':tid' => $taskId, ':uid' => $userId]);
 $task = $stmt->fetch();
 
 if (!$task) {
-    header("Location: /GABU/resident/my_reports.php");
+    header("Location: /smart waste system/resident/my_reports.php");
     exit();
 }
 
@@ -94,14 +94,14 @@ require_once __DIR__ . '/../includes/header.php';
                 <div class="alert alert-success fade-in">
                     <i class="bi bi-check-circle me-2"></i><?php echo $success; ?>
                 </div>
-                <a href="/GABU/resident/my_reports.php" class="btn btn-green">
+                <a href="/smart waste system/resident/my_reports.php" class="btn btn-green">
                     <i class="bi bi-arrow-left me-2"></i>Back to My Reports
                 </a>
             <?php elseif ($existingFeedback): ?>
                 <div class="alert alert-info fade-in">
                     <i class="bi bi-info-circle me-2"></i>You have already submitted feedback for this task.
                 </div>
-                <a href="/GABU/resident/my_reports.php" class="btn btn-green">
+                <a href="/smart waste system/resident/my_reports.php" class="btn btn-green">
                     <i class="bi bi-arrow-left me-2"></i>Back to My Reports
                 </a>
             <?php else: ?>

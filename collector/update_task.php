@@ -10,7 +10,7 @@ requireRole('collector');
 require_once __DIR__ . '/../config/database.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header("Location: /GABU/collector/dashboard.php");
+    header("Location: /smart waste system/collector/dashboard.php");
     exit();
 }
 
@@ -21,7 +21,7 @@ $collectorId = getCurrentUserId();
 // Validate
 $allowedStatuses = ['in-progress', 'completed'];
 if ($taskId <= 0 || !in_array($newStatus, $allowedStatuses)) {
-    header("Location: /GABU/collector/dashboard.php");
+    header("Location: /smart waste system/collector/dashboard.php");
     exit();
 }
 
@@ -35,7 +35,7 @@ try {
     $task = $stmt->fetch();
     
     if (!$task) {
-        header("Location: /GABU/collector/dashboard.php");
+        header("Location: /smart waste system/collector/dashboard.php");
         exit();
     }
     
@@ -51,9 +51,9 @@ try {
     $stmt = $pdo->prepare("UPDATE reports SET status = :status WHERE id = :rid");
     $stmt->execute([':status' => $newStatus, ':rid' => $task['rid']]);
     
-    header("Location: /GABU/collector/dashboard.php?updated=1");
+    header("Location: /smart waste system/collector/dashboard.php?updated=1");
     exit();
 } catch (PDOException $e) {
-    header("Location: /GABU/collector/dashboard.php");
+    header("Location: /smart waste system/collector/dashboard.php");
     exit();
 }

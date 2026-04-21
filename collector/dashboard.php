@@ -143,7 +143,7 @@ require_once __DIR__ . '/../includes/header.php';
                                 <td><?php echo date('M d, Y', strtotime($task['date_assigned'])); ?></td>
                                 <td>
                                     <?php if ($task['status'] !== 'completed'): ?>
-                                        <form action="/GABU/collector/update_task.php" method="POST" class="d-inline">
+                                        <form action="/smart waste system/collector/update_task.php" method="POST" class="d-inline">
                                             <input type="hidden" name="task_id" value="<?php echo $task['id']; ?>">
                                             <?php if ($task['status'] === 'assigned'): ?>
                                                 <input type="hidden" name="new_status" value="in-progress">

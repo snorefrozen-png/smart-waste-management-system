@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                 $stmt->execute([':rid' => $reportId]);
             }
         }
-        header("Location: /GABU/admin/reports.php?updated=1");
+        header("Location: /smart waste system/admin/reports.php?updated=1");
         exit();
     }
 }
@@ -118,7 +118,7 @@ require_once __DIR__ . '/../includes/header.php';
                                 <td><?php echo htmlspecialchars($report['location']); ?></td>
                                 <td>
                                     <?php if ($report['image']): ?>
-                                        <a href="/GABU/uploads/<?php echo htmlspecialchars($report['image']); ?>" target="_blank" class="text-green">
+                                        <a href="/smart waste system/uploads/<?php echo htmlspecialchars($report['image']); ?>" target="_blank" class="text-green">
                                             <i class="bi bi-image"></i>
                                         </a>
                                     <?php else: ?>
@@ -169,7 +169,7 @@ require_once __DIR__ . '/../includes/header.php';
                                                     <h5 class="modal-title">Assign Report #<?php echo $report['id']; ?></h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                                 </div>
-                                                <form action="/GABU/admin/assign_task.php" method="POST">
+                                                <form action="/smart waste system/admin/assign_task.php" method="POST">
                                                     <div class="modal-body">
                                                         <input type="hidden" name="report_id" value="<?php echo $report['id']; ?>">
                                                         <div class="mb-3">

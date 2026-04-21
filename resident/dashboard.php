@@ -38,7 +38,7 @@ require_once __DIR__ . '/../includes/header.php';
                 <p>Welcome back, <strong><?php echo htmlspecialchars($_SESSION['name']); ?></strong>! Here's your waste reporting overview.</p>
             </div>
             <div class="col-auto">
-                <a href="/GABU/resident/submit_report.php" class="btn btn-green">
+                <a href="/smart waste system/resident/submit_report.php" class="btn btn-green">
                     <i class="bi bi-plus-circle me-2"></i>New Report
                 </a>
             </div>
@@ -89,7 +89,7 @@ require_once __DIR__ . '/../includes/header.php';
     <div class="dashboard-card">
         <div class="card-header-custom">
             <h5><i class="bi bi-clock-history me-2"></i>Recent Reports</h5>
-            <a href="/GABU/resident/my_reports.php" class="btn btn-sm btn-outline-secondary">View All</a>
+            <a href="/smart waste system/resident/my_reports.php" class="btn btn-sm btn-outline-secondary">View All</a>
         </div>
 
         <?php if (count($recentReports) > 0): ?>
@@ -126,7 +126,7 @@ require_once __DIR__ . '/../includes/header.php';
             <div class="empty-state">
                 <i class="bi bi-inbox"></i>
                 <p>You haven't submitted any reports yet.</p>
-                <a href="/GABU/resident/submit_report.php" class="btn btn-green btn-sm">Submit Your First Report</a>
+                <a href="/smart waste system/resident/submit_report.php" class="btn btn-green btn-sm">Submit Your First Report</a>
             </div>
         <?php endif; ?>
     </div>

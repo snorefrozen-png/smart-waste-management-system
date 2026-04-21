@@ -11,11 +11,11 @@ session_start();
 // Redirect if already logged in
 if (isset($_SESSION['user_id'])) {
     $redirects = [
-        'admin'     => '/GABU/admin/dashboard.php',
-        'resident'  => '/GABU/resident/dashboard.php',
-        'collector' => '/GABU/collector/dashboard.php',
+        'admin'     => '/smart waste system/admin/dashboard.php',
+        'resident'  => '/smart waste system/resident/dashboard.php',
+        'collector' => '/smart waste system/collector/dashboard.php',
     ];
-    header("Location: " . ($redirects[$_SESSION['role']] ?? '/GABU/index.php'));
+    header("Location: " . ($redirects[$_SESSION['role']] ?? '/smart waste system/index.php'));
     exit();
 }
 
@@ -31,7 +31,7 @@ $error = $_GET['error'] ?? null;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="/GABU/assets/css/style.css" rel="stylesheet">
+    <link href="/smart waste system/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
     <!-- Hero Section with Login -->
@@ -98,7 +98,7 @@ $error = $_GET['error'] ?? null;
                             </div>
                         <?php endif; ?>
 
-                        <form id="loginForm" action="/GABU/auth/login.php" method="POST">
+                        <form id="loginForm" action="/smart waste system/auth/login.php" method="POST">
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email Address</label>
                                 <div class="input-group">
@@ -123,25 +123,11 @@ $error = $_GET['error'] ?? null;
                         </form>
                         <p class="text-center text-muted small mb-0">
                             Don't have an account? 
-                            <a href="/GABU/auth/register.php" class="text-decoration-none fw-semibold text-green">Register here</a>
+                            <a href="/smart waste system/auth/register.php" class="text-decoration-none fw-semibold text-green">Register here</a>
                         </p>
 
-                        <!-- Demo Credentials -->
-                        <hr class="my-3">
-                        <div class="text-center">
-                            <p class="small text-muted mb-1"><i class="bi bi-info-circle me-1"></i>Demo Credentials:</p>
-                            <p class="small text-muted mb-0">
-                                Admin: <code>admin@ncc.go.ke</code> | 
-                                Collector: <code>collector@ncc.go.ke</code>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/GABU/assets/js/main.js"></script>
+    <script src="/smart waste system/assets/js/main.js"></script>
 </body>
 </html>

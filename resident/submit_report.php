@@ -148,7 +148,7 @@ require_once __DIR__ . '/../includes/header.php';
                         <button type="submit" class="btn btn-green">
                             <i class="bi bi-send me-2"></i>Submit Report
                         </button>
-                        <a href="/GABU/resident/dashboard.php" class="btn btn-outline-secondary">Cancel</a>
+                        <a href="/smart waste system/resident/dashboard.php" class="btn btn-outline-secondary">Cancel</a>
                     </div>
                 </form>
             </div>

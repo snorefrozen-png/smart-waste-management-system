@@ -31,7 +31,7 @@ require_once __DIR__ . '/../includes/header.php';
                 <p>Track the status of all your waste reports.</p>
             </div>
             <div class="col-auto">
-                <a href="/GABU/resident/submit_report.php" class="btn btn-green">
+                <a href="/smart waste system/resident/submit_report.php" class="btn btn-green">
                     <i class="bi bi-plus-circle me-2"></i>New Report
                 </a>
             </div>
@@ -61,7 +61,7 @@ require_once __DIR__ . '/../includes/header.php';
                                 <td><?php echo htmlspecialchars($report['location']); ?></td>
                                 <td>
                                     <?php if ($report['image']): ?>
-                                        <a href="/GABU/uploads/<?php echo htmlspecialchars($report['image']); ?>" target="_blank" class="text-green">
+                                        <a href="/smart waste system/uploads/<?php echo htmlspecialchars($report['image']); ?>" target="_blank" class="text-green">
                                             <i class="bi bi-image"></i> View
                                         </a>
                                     <?php else: ?>
@@ -77,7 +77,7 @@ require_once __DIR__ . '/../includes/header.php';
                                 <td><?php echo date('M d, Y', strtotime($report['date_submitted'])); ?></td>
                                 <td>
                                     <?php if ($report['status'] === 'completed' && $report['task_id']): ?>
-                                        <a href="/GABU/resident/feedback.php?task_id=<?php echo $report['task_id']; ?>" 
+                                        <a href="/smart waste system/resident/feedback.php?task_id=<?php echo $report['task_id']; ?>" 
                                            class="btn btn-sm btn-gold">
                                             <i class="bi bi-star me-1"></i>Feedback
                                         </a>
@@ -94,7 +94,7 @@ require_once __DIR__ . '/../includes/header.php';
             <div class="empty-state">
                 <i class="bi bi-inbox"></i>
                 <p>No reports found. Submit your first waste report!</p>
-                <a href="/GABU/resident/submit_report.php" class="btn btn-green btn-sm">Submit Report</a>
+                <a href="/smart waste system/resident/submit_report.php" class="btn btn-green btn-sm">Submit Report</a>
             </div>
         <?php endif; ?>
     </div>

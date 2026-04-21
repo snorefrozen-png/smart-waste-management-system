@@ -20,6 +20,6 @@
     <!-- Chart.js (loaded on all pages, lightweight) -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <!-- Custom JS -->
-    <script src="/GABU/assets/js/main.js"></script>
+    <script src="/smart waste system/assets/js/main.js"></script>
 </body>
 </html>

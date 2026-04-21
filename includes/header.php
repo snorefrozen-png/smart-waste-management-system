@@ -24,13 +24,13 @@ $currentName = $_SESSION['name'] ?? 'Guest';
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="/GABU/assets/css/style.css" rel="stylesheet">
+    <link href="/smart waste system/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark-green sticky-top shadow">
         <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="/GABU/index.php">
+            <a class="navbar-brand d-flex align-items-center" href="/smart waste system/index.php">
                 <i class="bi bi-recycle me-2 fs-4"></i>
                 <span class="fw-bold">NCC Waste Management</span>
             </a>
@@ -40,16 +40,16 @@ $currentName = $_SESSION['name'] ?? 'Guest';
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <?php if ($currentRole === 'admin'): ?>
-                        <li class="nav-item"><a class="nav-link" href="/GABU/admin/dashboard.php"><i class="bi bi-speedometer2 me-1"></i>Dashboard</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/GABU/admin/reports.php"><i class="bi bi-file-earmark-text me-1"></i>Reports</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/GABU/admin/manage_users.php"><i class="bi bi-people me-1"></i>Users</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/GABU/admin/archive.php"><i class="bi bi-archive me-1"></i>Archive</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/smart waste system/admin/dashboard.php"><i class="bi bi-speedometer2 me-1"></i>Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/smart waste system/admin/reports.php"><i class="bi bi-file-earmark-text me-1"></i>Reports</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/smart waste system/admin/manage_users.php"><i class="bi bi-people me-1"></i>Users</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/smart waste system/admin/archive.php"><i class="bi bi-archive me-1"></i>Archive</a></li>
                     <?php elseif ($currentRole === 'resident'): ?>
-                        <li class="nav-item"><a class="nav-link" href="/GABU/resident/dashboard.php"><i class="bi bi-speedometer2 me-1"></i>Dashboard</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/GABU/resident/submit_report.php"><i class="bi bi-plus-circle me-1"></i>New Report</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/GABU/resident/my_reports.php"><i class="bi bi-list-check me-1"></i>My Reports</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/smart waste systen/resident/dashboard.php"><i class="bi bi-speedometer2 me-1"></i>Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/smart waste system/resident/submit_report.php"><i class="bi bi-plus-circle me-1"></i>New Report</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/smart waste system/resident/my_reports.php"><i class="bi bi-list-check me-1"></i>My Reports</a></li>
                     <?php elseif ($currentRole === 'collector'): ?>
-                        <li class="nav-item"><a class="nav-link" href="/GABU/collector/dashboard.php"><i class="bi bi-speedometer2 me-1"></i>Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/smart waste system/collector/dashboard.php"><i class="bi bi-speedometer2 me-1"></i>Dashboard</a></li>
                     <?php endif; ?>
 
                     <?php if (isset($_SESSION['user_id'])): ?>
@@ -60,12 +60,12 @@ $currentName = $_SESSION['name'] ?? 'Guest';
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li><span class="dropdown-item-text text-muted small">Role: <?php echo ucfirst($currentRole); ?></span></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item text-danger" href="/GABU/auth/logout.php"><i class="bi bi-box-arrow-right me-1"></i>Logout</a></li>
+                                <li><a class="dropdown-item text-danger" href="/smart waste system/auth/logout.php"><i class="bi bi-box-arrow-right me-1"></i>Logout</a></li>
                             </ul>
                         </li>
                     <?php else: ?>
-                        <li class="nav-item"><a class="nav-link" href="/GABU/index.php">Login</a></li>
-                        <li class="nav-item"><a class="nav-link btn btn-outline-light btn-sm ms-2 px-3" href="/GABU/auth/register.php">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/smart waste system/index.php">Login</a></li>
+                        <li class="nav-item"><a class="nav-link btn btn-outline-light btn-sm ms-2 px-3" href="/smart waste system/auth/register.php">Register</a></li>
                     <?php endif; ?>
                 </ul>
             </div>

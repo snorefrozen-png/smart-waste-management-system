@@ -27,17 +27,17 @@ function isLoggedIn()
 function requireRole($role)
 {
     if (!isLoggedIn()) {
-        header("Location: /GABU/index.php?error=login_required");
+        header("Location: /smart waste system/index.php?error=login_required");
         exit();
     }
     if ($_SESSION['role'] !== $role) {
         // Redirect to their own dashboard
         $redirects = [
-            'admin'     => '/GABU/admin/dashboard.php',
-            'resident'  => '/GABU/resident/dashboard.php',
-            'collector' => '/GABU/collector/dashboard.php',
+            'admin'     => '/smart waste system/admin/dashboard.php',
+            'resident'  => '/smart waste system/resident/dashboard.php',
+            'collector' => '/smart waste system/collector/dashboard.php',
         ];
-        $dest = $redirects[$_SESSION['role']] ?? '/GABU/index.php';
+        $dest = $redirects[$_SESSION['role']] ?? '/smart waste system/index.php';
         header("Location: $dest");
         exit();
     }

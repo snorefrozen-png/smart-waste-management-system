@@ -165,7 +165,7 @@ require_once __DIR__ . '/../includes/header.php';
                 </div>
                 <p class="text-muted small mb-3">Click on an area to filter reports by location.</p>
                 <div class="map-container">
-                    <img src="/GABU/assets/images/nairobi_map.svg" alt="Nairobi Map" usemap="#nairobiMap" 
+                    <img src="/smart waste system/assets/images/nairobi_map.svg" alt="Nairobi Map" usemap="#nairobiMap" 
                          id="nairobiMapImg" style="width:100%; max-width:500px;">
                     <map name="nairobiMap" id="nairobiMap">
                         <!-- Clickable zones mapped to Nairobi area positions in the SVG -->
@@ -200,7 +200,7 @@ require_once __DIR__ . '/../includes/header.php';
             <div class="dashboard-card">
                 <div class="card-header-custom">
                     <h5><i class="bi bi-table me-2"></i>Recent Reports</h5>
-                    <a href="/GABU/admin/reports.php" class="btn btn-sm btn-outline-secondary">Manage All</a>
+                    <a href="/smart waste system/admin/reports.php" class="btn btn-sm btn-outline-secondary">Manage All</a>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-custom mb-0" id="reportsTable">

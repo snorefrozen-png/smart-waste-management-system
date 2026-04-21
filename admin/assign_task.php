@@ -9,7 +9,7 @@ requireRole('admin');
 require_once __DIR__ . '/../config/database.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header("Location: /GABU/admin/reports.php");
+    header("Location: /smart waste system/admin/reports.php");
     exit();
 }
 
@@ -17,7 +17,7 @@ $reportId    = intval($_POST['report_id'] ?? 0);
 $collectorId = intval($_POST['collector_id'] ?? 0);
 
 if ($reportId <= 0 || $collectorId <= 0) {
-    header("Location: /GABU/admin/reports.php?error=invalid");
+    header("Location: /smart waste system/admin/reports.php?error=invalid");
     exit();
 }
 
@@ -42,9 +42,9 @@ try {
     $stmt = $pdo->prepare("UPDATE reports SET status = 'assigned' WHERE id = :id");
     $stmt->execute([':id' => $reportId]);
     
-    header("Location: /GABU/admin/reports.php?assigned=1");
+    header("Location: /smart waste system/admin/reports.php?assigned=1");
     exit();
 } catch (PDOException $e) {
-    header("Location: /GABU/admin/reports.php?error=failed");
+    header("Location: /smart waste system/admin/reports.php?error=failed");
     exit();
 }
